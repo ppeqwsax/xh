@@ -9,9 +9,13 @@
             function f1()
             {
                 var b = (parseInt(Math.random()*100)),c=0;
-                while(a!=b)
+                do
                 {
                     var a =parseInt(prompt("请输入一个数0-100",""));
+                     if(a>b){
+                            alert("对啦！");
+                         c++;
+                         }
                      if(a>b){
                             alert("大了");
                          c++;
@@ -20,8 +24,7 @@
                          alert("小了");
                          c++;
                      }
-                }
-                alert("恭喜你中奖了");
+                }while(a!=b)
                 alert(c-1);
             }
         </script>
@@ -43,7 +46,7 @@
         <br>
         <input type="button" onclick="f1()" value="玩数字炸弹">
         <br>
-        <video width="720" height="576" controls autoplay>
+        <video autoplay loop width="720" height="576" controls muted>
             <source src="movie.mp4" type="video/mp4">
             <object data="movie.mp4" width="720" height="576"></object> 
         </video>
